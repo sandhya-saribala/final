@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Money Transfer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .nav-links button {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    .nav-links .signup {
+      background: #003366;
+      color: white;
+      border: none;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 60px 20px;
+      background-color: #ccc;
+    }
+
+    .left {
+      max-width: 400px;
+    }
+
+    .left h1 {
+      font-size: 28px;
+      color: #003366;
+    }
+
+    .left p {
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .left button {
+      margin-top: 20px;
+      background: #1c75bc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .right {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .right input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .rate-info {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .fee, .discount, .total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .get-rate-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      background: #1c75bc;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .partners {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.partner-logos img {
+    width: 100px;
+    height: auto;
+}
+.button{
+    border-radius: 20px;
+    background-color: #0070ba;
+}
+   h2 {
+      color: #003366;
+      margin-bottom: 30px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .methods {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .method {
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .method img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .method span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    .delivery-section{
+        background-color: #0070ba;
+    }
+    .delivery-section h2 {
+      font-size: 24px;
+      color:black;
+      margin-top:100px;
+      
+    }
+
+    .delivery-section p {
+      font-size: 16px;
+      color: #6b7280;
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: black;
+      padding-left:550px;
+      
+    }
+
+    .get-started-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #1d8a8a;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      margin-left:680px;
+      
+    }
+
+    .get-started-btn:hover {
+      background-color: #176e6e;
+    }
+    .footer {
+      background:  #001f3f;
+      padding: 40px 20px;
+    }
+
+    .footer h4 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+
+    .footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+     .footer-column {
+      flex: 1 1 180px;
+      margin: 10px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .footer-social img {
+      width: 24px;
+      height: 24px;
+    }
+    .app-download-section {
+    text-align: center;
+    background-color:#001f3f; 
+  color: white;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.app-buttons img {
+  height: 50px;
+  cursor: pointer;
+}
+
+.qr-section p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-info {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ccc;
+} 
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="./shake hand 2.svg">
+  <div class="nav-links">
+    <a href="#">Rates & Fees</a>
+    <a href="./providers.html">providers</a>
+    <a href="./help.html">Help</a>
+    <a href="./login.html" class="login">log in</a>
+    <a href="./sign up.html" class="signup">Sign Up</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="left">
+    <h1>Transfer money to our providers in India from the United States</h1>
+    <p>Worry-free transfers for you and your loved ones</p>
+    <button>Send now</button>
+  </div>
+
+  <div class="right">
+    <label>You send</label>
+    <input type="text" value="100.00" />
+    
+    <label>They receive</label>
+    <input type="text" value="8,587.00" />
+
+    <div class="rate-info">Special rate<br>1 USD = 85.87 INR</div>
+
+    <div class="fee"><span>Fee</span><span>3.99 USD</span></div>
+    <div class="discount"><span>Discount</span><span>-3.99 USD</span></div>
+    <div class="total"><strong>Total cost</strong><strong>100.00 USD</strong></div>
+
+    <button class="get-rate-btn">Get this rate</button>
+  </div>
+</div>
+<section class="partners">
+        <h3>Where to send money in India with Remitly</h3>
+        <div class="partner-logos">
+            <img src="./axis bank.svg" alt="Axis Bank">
+            <img src="./upi.svg" alt="UPI">
+            <img src="./sbi.svg" alt="SBI">
+            <img src="./hdfc.svg" alt="HDFC Bank">
+            <img src="./baroda.svg" alt="BARODA Bank">
+        </div>
+        <button>View More</button>
+    </section>
+    <h2>Choose your preferred delivery method when sending money to India</h2>
+
+  <div class="methods">
+    <div class="method">
+      <img src="./home.svg" alt="Bank deposit" />
+      <span>Bank deposit</span>
+    </div>
+    <div class="method">
+      <img src="./home2.svg" alt="Cash pickup" />
+      <span>Cash pickup</span>
+    </div>
+    <div class="method">
+      <img src="./upi.svg" alt="UPI" />
+      <span>UPI</span>
+    </div>
+  </div>
+  <div class="delivery-section">
+    <h2>Pick your delivery provider</h2>
+    <p>Send today with our providers in a few easy steps</p>
+    <button class="get-started-btn">Get started</button>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Remitly</h4>
+        <a href="#">User Agreement</a>
+        <a href="#">Privacy Help Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Licenses</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Newsroom</a>
+        <a href="#">Press</a>
+        <a href="#">Careers</a>
+        <a href="#">Investors</a>
+        <a href="#">Become an affiliate</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="#">Rates & fees</a>
+        <a href="#">Security</a>
+        <a href="#">Reviews</a>
+        <a href="#">Partners</a>
+        <a href="#">Swift codes</a>
+        <a href="#">Routing numbers</a>
+        <a href="#">Log in</a>
+        <a href="#">Sign up</a>
+        <a href="#">Refer friends</a>
+        <a href="#">Businesses</a>
+     </div>
+     <div class="footer-column">
+        <h4>Support</h4>
+        <a href="#">Help</a>
+        <a href="#">File a complaint</a>
+        <h4>Connect</h4>
+        <div class="footer-social">
+          <img src="./facebook.svg" alt="Facebook">
+          <img src="./cross.svg" alt="X">
+        </div>
+      </div>
+    </div>
+  </footer>
+   <div class="app-download-section">
+  <div class="app-buttons">
+    <img src="./googleplay.png" alt="Get it on Google Play">
+    <img src="./app store.svg" alt="Download on the App Store">
+  </div>
+  <div class="qr-section">
+    <p>Scan the code with your phone to get the app</p>
+    <img src="./scanner.png" alt="QR Code" class="qr-code">
+  </div>
+  <div class="footer-info">
+    <p>&copy; 2012 – 2025 Remitly, Inc. All rights reserved</p>
+    <p>NMLS ID #1028236</p>
+  </div>
+ </div>  
+
+</body>
+</html>

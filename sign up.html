@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remitly Sign Up</title>
+</head>
+<style>
+.signup-container {
+  background-color: transparent;
+  padding-left:500px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+  color: #111;
+  font-size: 22px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .toggle-visibility {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.note {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.terms {
+  font-size: 12px;
+  color: #555;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.terms a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+button[type="submit"] {
+  background-color: #0077c8;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.or {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.social-button img {
+  height: 18px;
+  margin-right: 8px;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: #0066cc;
+  text-decoration: none;
+}
+</style>
+<body>
+  <div class="signup-container">
+    <img src="./shake hand 2.svg" alt="Remitly Logo" width="120" style="display:block; margin:0 auto 20px;" />
+
+    <h2>Create a Remitly profile</h2>
+
+    <form>
+      <label for="email">Email address</label>
+      <input type="email" id="email" placeholder="abc@example.com" required />
+
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" required />
+        <button type="button" class="toggle-visibility">👁</button>
+      </div>
+      <p class="note">Must be at least 8 characters</p>
+
+      <label for="confirm-password">Confirm password</label>
+      <div class="password-wrapper">
+        <input type="password" id="confirm-password" required />
+        <button type="button" class="toggle-visibility">👁</button>
+      </div>
+
+      <p class="terms">
+        By using Remitly, you agree to our 
+        <a href="#">E-sign Disclosure and Consent Notice</a>, 
+        <a href="#">Privacy Policy</a>, and 
+        <a href="#">User Agreement</a>.
+      </p>
+
+      <button type="submit">Sign up</button>
+
+      <div class="or">or</div>
+
+      <div class="social-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" />
+        Continue with Google
+      </div>
+      <div class="social-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" />
+        Continue with Apple
+      </div>
+
+      <div class="login-link">
+        Already have a profile? <a href="./login.html">Log in</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
